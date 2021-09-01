@@ -1,0 +1,363 @@
+@import url('https://fonts.googleapis.com/css2?family=Nanum+Gothic&display=swap');
+*{margin: 0; padding: 0;}
+/* li{list-style: none;} */
+a{display: block; text-decoration: none; color: #333;}
+body{font-family: 'Nanum Gothic', sans-serif;}
+.wrap{width: 100%;}
+img{width: 100%;}
+header, section, footer{width: 100%; float: left;}
+div{box-sizing: border-box;}
+.logo img{float: left;}
+.logo_t{float: left;}
+.top{
+    width: 50px; height: 50px; 
+    position: fixed; 
+    right: 50px; bottom: 0;
+    text-align: center; line-height: 50px;
+    color: #333;
+    background: #fff;
+    border: 1px solid #333;
+    font-weight: bold;
+    cursor: pointer;
+}
+
+/* pc */
+@media screen and (min-width:481px) {
+    .center_in{width: 1200px; margin: 0 auto;}  
+    header{
+        display: flex; flex-flow: row nowrap; 
+        justify-content: space-around; 
+        padding: 1.6vw 1vw 0;
+    }  
+    .logo{width: 12.5vw; display: flex;  justify-content: left;}
+    .logo img{width: 2.6vw; margin-right: 10px;}
+    .logo_t{
+        text-align: center; 
+        font-size: 1.3vw; /* font-weight: 500; */
+        line-height: 1.3vw;
+    }
+    .pc_menu{
+        display: block; 
+        display: flex; flex-flow: row nowrap;
+        width: 70vw;
+        justify-content: space-between;
+    }
+    .mo_menu{display: none;}
+    /* nav{float: left; margin-top: 16px; margin-left: 100px;} */
+    nav{width: 30vw;}
+    nav > div{
+        display: flex; flex-flow: row nowrap; justify-content: space-between;
+        position: relative; 
+        z-index: 6;
+    }
+    /* nav > div > div{float: left;} */
+    nav > div > div > a{
+        padding: 0 2vw 2.4vw;
+        font-size: 1.5vw;
+        /* white-space: nowrap; */
+    }
+    nav .sub{display: none; padding: 1vw 0 0 1.5vw; position: absolute;}
+    nav .sub > div > a{font-size: 1.3vw; padding: .5vw; white-space: nowrap;}
+
+    .sub_bg{
+        display: none;
+        width: 100%;
+        height: 15vw;
+        position: absolute;
+        left: 0;
+        top: 6vw;
+        background-color: #f0f0f0;
+        z-index: 5;
+    }
+    .top_menu > div{display: flex;}
+    .top_menu > div > div{width: 12.5vw; margin: .5vw .3vw;}
+    .top_menu > div > div > input{font-size: 1.2vw; float: left; width: 10vw; margin-right: .8vw; border: 0; position: relative; border-bottom: 1px solid #333;}
+    /* .top_menu > div > div > input::after{content: ''; position: absolute; background: #333; width: 100%; height: 1px; bottom: 0; left: 0;} */
+    .top_menu > div > div > a{width: 1.7vw; float: left;}
+    .mo_menu_btn{display: none;}
+
+    .visual .carousel-inner .s1{
+        background: url(../img/mml_load_spooky_uhd.jpg);
+        background-size: 100vw;
+        background-position: bottom;
+        background-repeat: no-repeat;
+    }
+    .visual .carousel-inner .s2{
+        background: url(../img/8rvre8u24z231.jpg);
+        background-size: 100vw;
+        background-position: center;
+        background-repeat: no-repeat;
+    }
+
+    .visual .carousel-inner div{
+        height: 30vw; position: relative;
+    }
+    .visual .carousel-inner h1{font-size: 2vw; margin: 3.5vw 0 0 3.5vw;}
+    .visual .carousel-inner h2{font-size: 1.4vw; margin-left: 3.5vw;}
+    .visual .carousel-inner h4{font-size: 1vw;
+        position: absolute; bottom: 7vw; right: 3.5vw;
+    }
+    .visual .carousel-inner h1,.visual .carousel-inner h2,.visual .carousel-inner h4{
+        text-shadow: 1px 1px 0 #fff;
+    }
+
+    .banner{margin-top: 5vw;}
+    .banner .row .s1{
+        background: url(../img/battletech__daedalus_by_mecha_zone_d2wsbtn-fullview.jpg);
+        background-size: 374px 300px;
+        background-repeat: no-repeat;
+        background-position: 180px 70px;
+    }
+    .banner .row .s2{
+        background: url(../img/Hvy_Foot_LRM_Inf_3085.png);
+        background-size: 374px 300px;
+        background-repeat: no-repeat;
+        background-position: 180px 70px;
+    }
+    .banner .row div{height: 400px; padding: 0 21px;}
+    .banner .row div > a{border: 1px solid #666; height: 100%;}
+    .banner h1{margin: 20px 0 10px 20px;}
+    .banner h4{margin: 0 20px; line-height: 1.5em;}
+    .banner h5{margin: 0 20px}
+    .banner h4,.banner h1,.banner h5{color: #cccccc; text-shadow: 2px 2px 0 #666;}
+    .banner h4,.banner h5{text-shadow: 1px 1px 0 #666;}
+    
+    .introduce{margin-top: 5vw;}
+    .introduce .row div{height: 400px;}
+    .introduce .s1{
+        background: url(../img/minipic5.jpg), url(../img/tri.png);
+        background-position: 50% 20%, 68% 73%;
+        background-repeat: no-repeat;
+        background-size: 166px, 200px;
+    }
+    .introduce .s2{
+        background: url(../img/mf_books_mini.png), url(../img/tri.png);
+        background-position: 50% 15%, 68% 73%;
+        background-repeat: no-repeat;
+        background-size: 204px, 200px;
+    }
+    .introduce .s3{
+        background: url(../img/mm-banner-square-artist.gif), url(../img/tri.png);
+        background-position: 50% 20%, 68% 73%;
+        background-repeat: no-repeat;
+        background-size: 174px, 200px;
+    }
+    /* .introduce a{padding-top: ;} */
+    .introduce h1{text-align: center; line-height: 550px; position: relative; color: #333;}
+
+    .banner2{
+        width: 100%; height: 500px;
+        background: url(../img/Ejection_from_F-15_Test_Sled_web_waifu2x_photo_scale_tta_1.png);
+        background-position: center top;
+        background-repeat: no-repeat;
+        background-size: cover;
+    }
+    .banner2 .MF_introduce_list{
+        padding: 60px 0;
+        width: 32%;
+        float: left;
+        background-color: rgba(0, 0, 0, .2);
+        height: 500px;
+    }
+    .banner2 h1{text-align: center; font-size: 48px;}
+    .banner2 h2{text-indent: 30%; margin: 40px 0;}
+    .banner2 h1,.banner2 h2{color: #fff; text-shadow: 2px 2px 0 #333;}
+
+    .icon{margin: 5vw 0; padding: 2.5vw 0;}
+    .icon .row .col-sm-4 a{width: 200px; margin: 0 auto;}
+    .icon h1{text-align: center; margin-top: 2.5vw;}
+
+    footer{background: #333; color: #ccc; padding: 3.5vw 0;}
+    footer .row .col-sm-6{padding: 0 1vw; display: flex; justify-content: center;}
+    footer a{color: #ccc; font-size: 1vw;}
+    footer .copyright p{font-size: 1vw; line-height: 2.6vw; margin: 0;}
+
+    footer .footer_menu div{float: left; padding: 0 1vw; line-height: 2.6vw; position: relative;}
+    footer .footer_menu div::before{
+        content: ''; width: 1px; height: 1vw; background: #fff;
+        position: absolute; left: 0; bottom: .65vw;}
+    footer .footer_menu div:first-child{margin-left: 0;}
+    footer .footer_menu div:first-child::before{display: none;}
+    footer .footer_menu div:last-child{margin-right: 0;}
+}
+
+/* Tablet */
+/* @media screen and (max-width:1024px) {
+    .center_in{width: 100%;}
+} */
+
+/* Mobile */
+@media screen and (max-width:480px) {
+    html,body{overflow-x: hidden;}
+    .center_in{width: 100%;}
+    header{padding: 2vw;}
+    .logo{display: flex; flex-wrap: nowrap; align-items: center;}
+    .logo img{width: 12vw; margin-right: 3vw;}
+    .logo_t{
+        text-align: center; 
+        font-size: 6vw; line-height: 6vw;
+    }
+    .pc_menu{display: none;}
+    .mo_menu{display: block;}
+    .mo_menu_btn{display: block;
+        width: 70vw;
+    }
+    .mo_menu_btn a{width: 12vw; float: left; margin: 2vw;}
+    .mo_menu{
+        width: 70vw;
+        height: 100%;
+        position: absolute;
+        left: -70vw;
+        top: 0;
+        padding: 4vw;
+        background-color: #eee;
+        z-index: 100;
+    }
+    .mo_menu .close{
+        width: 12vw;
+        margin-right: 4vw;
+        float: left;
+    }
+    /* .mo_menu .top_menu{
+        width: 100%;
+        height: 50px;
+        background-color: #fff;
+        float: left;
+    } */
+    .mo_menu .top_menu > div{display: flex;}
+    .mo_menu .top_menu > div > div{width: 50%;}
+    .mo_menu .top_menu > div > div > a{text-align: center; line-height: 40px;}
+    .mo_menu .top_menu > div > div:first-child{border-right: 1px solid #fff0f0;}
+    .mo_menu nav{margin-top: 6vw; margin-left: 15vw; float: left;}
+    .mo_menu nav > div{flex-flow: column nowrap;}
+    .mo_menu nav > div > div > a{
+        font-size: 3.7vw; color: #333; 
+    }
+    .mo_menu .sub{position: relative; display: none;}
+    .mo_menu .sub div a{font-size: 3vw; color: #666;}
+
+    .visual .carousel-inner .s1{
+        background: url(../img/mml_load_spooky_uhd.jpg) no-repeat;
+        background-size: 300vw;
+        background-position: 78% 55%;
+        background-repeat: no-repeat; 
+    }
+    .visual .carousel-inner .s2{
+        background: url(../img/8rvre8u24z231.jpg);
+        background-size: 250vw;
+        background-position: 20% 100%;
+        background-repeat: no-repeat;
+    }
+    .visual .carousel-inner div{
+        height: 120vw; position: relative;
+    }
+    .visual .carousel-inner h1{font-size: 8vw; margin: 3.5vw 0 0 3.5vw;}
+    .visual .carousel-inner h2{font-size: 6vw; margin-left: 3.5vw;}
+    .visual .carousel-inner h4{font-size: 3vw;
+        position: absolute; bottom: 7vw; right: 3.5vw;
+    }
+    .visual .carousel-inner h1,.visual .carousel-inner h2{
+        text-shadow: 1px 1px 0px #fff,0px 2px 0px #fff,-1px 1px 0px #fff,-2px 0px 0px #fff,
+        -1px -1px 0px #fff,0px -2px 0px #fff,1px -1px 0px #fff,2px 0px 0px #fff;
+    }
+    .visual .carousel-inner h4{
+        font-weight: bold;
+        text-shadow: 1px 1px 0px #fff,-1px 1px 0px #fff,
+        -1px -1px 0px #fff,1px -1px 0px #fff;
+    }
+
+    .visual .carousel-item{
+        height: 70vw;
+        background-position: 50% 70%;
+        background-repeat: no-repeat;
+        background-size: 1000px 600px;
+    }
+    .banner{margin-top: 5vw;}
+    .banner .row .s1{
+        background: url(../img/battletech__daedalus_by_mecha_zone_d2wsbtn-fullview.jpg);
+        background-size: 64.5vw 51.6vw;
+        background-repeat: no-repeat;
+        background-position: 30vw 120px;
+    }
+    .banner .row .s2{
+        background: url(../img/Hvy_Foot_LRM_Inf_3085.png);
+        background-size: 64.5vw 51.6vw;
+        background-repeat: no-repeat;
+        background-position: 30vw 120px;
+    }
+    .banner .row div{
+        height: 400px; padding: 0 21px;
+        margin-bottom: 5vw;
+    }
+    .banner .row div:last-child{margin-bottom: 0;}
+    .banner .row div > a{border: 1px solid #666; height: 100%;}
+    .banner h1{margin: 20px 0 10px 20px;}
+    .banner h4{margin: 0 20px; line-height: 1.5em;}
+    .banner h5{margin: 0 20px}
+    .banner h4,.banner h1,.banner h5{color: #cccccc; text-shadow: 2px 2px 0 #666;}
+    .banner h4,.banner h5{text-shadow: 1px 1px 0 #666;}
+    
+    .introduce{margin-top: 5vw;}
+    .introduce .row div{height: 400px;}
+    .introduce .s1{
+        background: url(../img/minipic5.jpg), url(../img/tri.png);
+        background-position: 50% 20%, 53% 73%;
+        background-repeat: no-repeat;
+        background-size: 166px, 200px;
+    }
+    .introduce .s2{
+        background: url(../img/mf_books_mini.png), url(../img/tri.png);
+        background-position: 50% 15%, 53% 73%;
+        background-repeat: no-repeat;
+        background-size: 204px, 200px;
+    }
+    .introduce .s3{
+        background: url(../img/mm-banner-square-artist.gif), url(../img/tri.png);
+        background-position: 50% 20%, 53% 73%;
+        background-repeat: no-repeat;
+        background-size: 174px, 200px;
+    }
+    .introduce h1{text-align: center; line-height: 550px; position: relative; color: #333;}
+    .banner2{
+        width: 100%; height: 500px;
+        background: url(../img/Ejection_from_F-15_Test_Sled_web_waifu2x_photo_scale_tta_1.png) #00f7ff;
+        background-position: 25% 18.75vw;
+        background-repeat: no-repeat;
+        background-size: cover;
+    }
+    .banner2 .MF_introduce_list{
+        padding: 8.3vw 0;
+        width: 50%;
+        float: left;
+        background-color: rgba(0, 0, 0, .2);
+        height: 500px;
+    }
+    .banner2 h1{text-align: center; font-size: 10vw; line-height: .9em; font-weight: normal;}
+    .banner2 span{font-size: .7em;}
+    .banner2 h2{
+        text-indent: 20%; 
+        font-size: 7.5vw;
+        margin: 36px 0;
+    }
+    .banner2 h1,.banner2 h2{color: #fff; text-shadow: 2px 2px 0 #333;}
+    
+    .banner2 h1,.banner2 h2{color: #fff; text-shadow: 2px 2px 0 #333;}
+
+    .icon{margin: 5vw 0; padding: 2.5vw 0;}
+    .icon .row .col-sm-4 a{width: 40vw; margin: 5vw auto;}
+    .icon .row .col-4 a{width: 40vw; margin: 5vw 0;}
+    .icon h1{text-align: center; margin-top: 2.5vw;}
+
+    footer{background: #333; color: #ccc; padding: 10vw 0;}
+    footer .row .col-sm-6{padding: 0 5vw; display: flex; justify-content: center; flex-direction: column; align-items: center;}
+    footer a{color: #ccc; font-size: 4vw; margin: 0 auto;}
+    footer .logo_t{font-size: 4.5vw; line-height: 4.5vw; padding: 1.5vw 0;}
+    footer .copyright p{font-size: 3vw; margin-top: 3vw;}
+    footer .footer_menu div{float: left; padding: 0 12vw; position: relative; }
+    footer .footer_menu div::before{
+        content: ''; width: 1px; height: 3vw; background: #ccc;
+        position: absolute; left: 0; bottom: 1.3vw;}
+    footer .footer_menu div:first-child{margin-left: 0;}
+    footer .footer_menu div:nth-child(2n+1)::before{display: none;}
+    footer .footer_menu div:last-child{margin-right: 0;}
+}
